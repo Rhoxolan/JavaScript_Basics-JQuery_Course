@@ -1,8 +1,8 @@
 const milesConvertsValue = 0.621371;
 let userChoice;
 
-// while(true)
-// {
+while(true)
+{
     userChoice = +prompt("Please select the task (1 - 10)");
 
     switch(userChoice)
@@ -37,7 +37,7 @@ let userChoice;
         case 10: Task10();
         break;
     }
-// }
+}
 
 function Task1()
 {
@@ -120,10 +120,21 @@ function Task8()
 
 function Task9()
 {
-    
+    let fiveDigitNumber = prompt("Please enter the five-digit number");
+    if(fiveDigitNumber > 99999 || fiveDigitNumber < 10000)
+    {
+        alert("Input error!");
+        return;
+    }
+    let firstDigit = fiveDigitNumber[0];
+    let lastdigit = fiveDigitNumber[4];
+    let slicedNumber = fiveDigitNumber.slice(1, 4);
+    let newFiveDigitNumber = lastdigit.concat(slicedNumber).concat(firstDigit);
+    alert(`Reverse number if ${newFiveDigitNumber}`);
 }
 
 function Task10()
 {
-    
+    let totalSalesAmount = prompt("Please enter the total sales amount:");
+    alert(`Worker salary is ${250 + totalSalesAmount/10}$`);
 }
