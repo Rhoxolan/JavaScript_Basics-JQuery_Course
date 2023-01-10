@@ -1,3 +1,4 @@
+const milesConvertsValue = 0.621371;
 let userChoice;
 
 // while(true)
@@ -40,29 +41,37 @@ let userChoice;
 
 function Task1()
 {
-    let digit = prompt("Please enter your digit");
+    let digit = +prompt("Please enter your digit");
     alert(`Second power of digit ${digit} is ${digit**2}!`);
 
 }
 
 function Task2()
 {
-    alert("Hello from Task 2!");
+    let firstDigit = +prompt("Please enter first digit");
+    let secondDigit = +prompt("Please enter second digit");
+    alert(`Avarege of the your digits is ${(firstDigit + secondDigit) / 2}`);
 }
 
 function Task3()
 {
-    
+    let sideLenth = +prompt("Please input side lingth of the square");
+    alert(`Area of the square is ${sideLenth**2}`);
 }
 
 function Task4()
 {
-    
+    let cilometers = +prompt("Please input the cilometers length. You will get the miles length.");
+    alert(`Miles length is ${cilometers * milesConvertsValue}`);
 }
 
 function Task5()
 {
-    
+    let firstDigit = +prompt("Please enter first digit");
+    let secondDigit = +prompt("Please enter second digit");
+    alert(`Operations with these digits:\n+ ${firstDigit + secondDigit}\n` +
+    `- ${firstDigit - secondDigit}\n* ${firstDigit * secondDigit}\n` +
+    `/ ${firstDigit / secondDigit}`);
 }
 
 function Task6()
