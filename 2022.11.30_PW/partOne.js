@@ -119,7 +119,7 @@ function Task7() {
     console.log(SumOfTo5(1,2,3,4,5));
 }
 
-function SumOfTo5(a, ...x){
+function SumOfTo5(a, ...x){ //Add to description
     if(x.length > 4)
     {
         return "Input error";
