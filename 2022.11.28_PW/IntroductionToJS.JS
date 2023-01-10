@@ -79,17 +79,43 @@ function Task6()
     let a = +prompt("Please enter 'a' value");
     let b = +prompt("Please enter 'b' value");
     alert(`${-b / a}`);
-
 }
 
 function Task7()
 {
-    
+    let hh = +prompt("Please enter the hours (0 - 23)");
+    if(hh > 23 || hh < 0)
+    {
+        alert("Input error!");
+        return;
+    }
+    let mm = +prompt("Please enter the minutes (0 - 59)");
+    if(mm > 59 || hh < 0)
+    {
+        alert("Input error!");
+        return;
+    }
+    let nowDate = new Date();
+    let tomorrowDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate()+1);
+    let userDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), hh, mm);
+    let diff = tomorrowDate - userDate;
+
+    let minutes = ((diff / (1000 * 60)) % 60).toFixed();
+    let hours = ((diff / (1000 * 60 * 60)) % 24).toFixed();
+
+    alert(`${hours} hours ${minutes} minutes left until tomorrow`);
 }
 
 function Task8()
 {
-    
+    let tripleNumber = +prompt("Please enter the triple number");
+    if(tripleNumber > 999 || tripleNumber < 100)
+    {
+        alert("Input error!");
+        return;
+    }
+    let secondDigit = Math.floor((tripleNumber/10)% 10);
+    alert(`Second digit of number ${tripleNumber} is ${secondDigit}`);
 }
 
 function Task9()
