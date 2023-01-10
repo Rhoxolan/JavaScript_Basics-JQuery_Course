@@ -76,7 +76,10 @@ function Task5()
 
 function Task6()
 {
-    
+    let a = +prompt("Please enter 'a' value");
+    let b = +prompt("Please enter 'b' value");
+    alert(`${-b / a}`);
+
 }
 
 function Task7()
