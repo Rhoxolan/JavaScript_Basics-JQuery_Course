@@ -39,11 +39,11 @@ function GetFactorial(n) { //Пример рекурсивной функции
 function Task2() {
     let start = +prompt("Enter the start digit:");
     let finish = +prompt("Enter the finish digit:");
-    return order().order(start, finish);
+    return order().direct(start, finish);
 }
 
 function order() { //Пример применения паттерна модуль
-    let outString = "";
+    let outString = ""; //Рещить проблему
     return {
         direct: function (start, finish) {
             if (start == finish && outString == "") {
@@ -55,7 +55,7 @@ function order() { //Пример применения паттерна моду
             }
             outString = outString.concat(start + " ");
             start++;
-            return DirectOrder(start, finish, outString);
+            return order().direct(start, finish);
         },
         reverse: function (start, finish) {
             if (finish == start && outString == "") {
@@ -67,33 +67,33 @@ function order() { //Пример применения паттерна моду
             }
             outString = outString.concat(finish + " ");
             finish--;
-            return ReverseOrder(start, finish, outString);
+            return order().reverse(start, finish);
         }
     }
 }
 
-function DirectOrder(start, finish, outString = "") { //Пример определения для параметра значения по умолчанию
-    if (start == finish && outString == "") {
-        return `${start}`;
-    }
-    if (start == finish) {
-        outString = outString.concat(start + " ");
-        return outString;
-    }
-    outString = outString.concat(start + " ");
-    start++;
-    return DirectOrder(start, finish, outString);
-}
+// function DirectOrder(start, finish, outString = "") { //Пример определения для параметра значения по умолчанию
+//     if (start == finish && outString == "") {
+//         return `${start}`;
+//     }
+//     if (start == finish) {
+//         outString = outString.concat(start + " ");
+//         return outString;
+//     }
+//     outString = outString.concat(start + " ");
+//     start++;
+//     return DirectOrder(start, finish, outString);
+// }
 
-function ReverseOrder(start, finish, outString = "") {
-    if (finish == start && outString == "") {
-        return `${finish}`;
-    }
-    if (finish == start) {
-        outString = outString.concat(finish + " ");
-        return outString;
-    }
-    outString = outString.concat(finish + " ");
-    finish--;
-    return ReverseOrder(start, finish, outString);
-}
+// function ReverseOrder(start, finish, outString = "") {
+//     if (finish == start && outString == "") {
+//         return `${finish}`;
+//     }
+//     if (finish == start) {
+//         outString = outString.concat(finish + " ");
+//         return outString;
+//     }
+//     outString = outString.concat(finish + " ");
+//     finish--;
+//     return ReverseOrder(start, finish, outString);
+// }
