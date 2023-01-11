@@ -31,7 +31,7 @@ function GetFactorial(n) { //Пример рекурсивной функции
     if (n === 1){
         return 1;
     }
-    else{
+    else {
         return n * GetFactorial(n - 1);
     }
 }
@@ -39,8 +39,8 @@ function GetFactorial(n) { //Пример рекурсивной функции
 function Task2() {
     let start = +prompt("Enter the start digit:");
     let finish = +prompt("Enter the finish digit:");
-    return DirectOrder(start, finish);
-
+    //return DirectOrder(start, finish);
+    return ReverseOrder(start, finish);
 }
 
 function DirectOrder(start, finish, outString = "") { //Пример определения для параметра значения по умолчанию
@@ -54,4 +54,8 @@ function DirectOrder(start, finish, outString = "") { //Пример опред�
     outString = outString.concat(start + " ");
     start++;
     return DirectOrder(start, finish, outString);
+}
+
+function ReverseOrder(start, finish, outString = "") {
+
 }
