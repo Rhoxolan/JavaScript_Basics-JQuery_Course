@@ -1,48 +1,45 @@
 let userChoice;
 
-// while(true)
-// {
-userChoice = +prompt("Please select the task (1 - 10)");
+while (true) {
+    userChoice = +prompt("Please select the task (1 - 10)");
 
-if (userChoice > 10) {
-    // continue;
+    if (userChoice > 10) {
+        continue;
+    }
+    if (userChoice > 9) {
+        Task10();
+    }
+    else if (userChoice > 8) {
+        Task9();
+    }
+    else if (userChoice > 7) {
+        Task8();
+    }
+    else if (userChoice > 6) {
+        Task7();
+    }
+    else if (userChoice > 5) {
+        Task6();
+    }
+    else if (userChoice > 4) {
+        Task5();
+    }
+    else if (userChoice > 3) {
+        Task4();
+    }
+    else if (userChoice > 2) {
+        Task3();
+    }
+    else if (userChoice > 1) {
+        Task2();
+    }
+    else if (userChoice > 0) {
+        Task1();
+    }
+    else if (userChoice <= 0) {
+        continue;
+    }
 }
-if (userChoice > 9) {
-    Task10();
-}
-else if (userChoice > 8) {
-    Task9();
-}
-else if (userChoice > 7) {
-    Task8();
-}
-else if (userChoice > 6) {
-    Task7();
-}
-else if (userChoice > 5) {
-    Task6();
-}
-else if (userChoice > 4) {
-    Task5();
-}
-else if (userChoice > 3) {
-    Task4();
-}
-else if (userChoice > 2) {
-    Task3();
-}
-else if (userChoice > 1) {
-    Task2();
-}
-else if (userChoice > 0) {
-    Task1();
-}
-else if (userChoice < 0) {
-    //continue;
-}
-
-
-// }
 
 function Task1() {
     let firstDigit = +prompt("Please enter the first digit:");
@@ -60,7 +57,7 @@ function LesserDefine(a, b) {
 function Task2() {
     let digit = +prompt("Please enter the digit");
     let pow = +prompt("Please enter the pow");
-    alert(`The pow of the digit ${digit} is ${PowOfDigit(digit, pow)}`);
+    alert(`The pow ${pow} of the digit ${digit} is ${PowOfDigit(digit, pow)}`);
 }
 
 function PowOfDigit() {
@@ -173,9 +170,22 @@ function EvenOrOdd(min, max, even) {
 }
 
 function Task10() {
-
+    let tomorrowDate = GetTomorrow(11, 0, 2023);
+    console.log(tomorrowDate.toLocaleDateString());
+    tomorrowDate = GetTomorrow(28, 1, 2023);
+    console.log(tomorrowDate.toLocaleDateString());
 }
 
-function GetTomorrow(day, moth, year) {
-    //Тут сделать проверку, из проверки сделать переменную вар типа дате, то есть проверить вар из блока.
+function GetTomorrow(day, month, year) {
+    if (day > 0 && day < 32 && month > -1 && month < 12 &&
+        year > 1899 && year < 3001) {
+        var date = new Date(year, month, day); //Пример использования переменной области видимости функции (var).
+    }
+    else {
+        return "Input error";
+    }
+
+    //alert(date.toLocaleDateString());
+
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
 }
