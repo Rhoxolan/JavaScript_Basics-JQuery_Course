@@ -64,11 +64,11 @@ function Task2() {
 }
 
 function PowOfDigit() {
-    return arguments[0] ** arguments[1]; //Add to desctiption
+    return arguments[0] ** arguments[1]; //Пример использования общедоступного массива arguments 
 }
 
 function Task3() {
-    let func = function (symb, a, b) { //Add to description
+    let func = function (symb, a, b) { //Пример создания анонимной функции и присваивания её переменной
         switch (symb) {
             case "+":
                 return a + b;
@@ -94,14 +94,14 @@ function Task4() {
 }
 
 function Task5() {
-    for (let i = 2; i <= 9; i++){
+    for (let i = 2; i <= 9; i++) {
         MultiplicationToConsoleLog(i);
     }
 }
 
-function MultiplicationToConsoleLog(digit){
+function MultiplicationToConsoleLog(digit) {
     for (let i = 2; i <= 9; i++) {
-        console.log(digit*i);
+        console.log(digit * i);
     }
 }
 
@@ -110,32 +110,47 @@ function Task6() {
 }
 
 function Task7() {
-    console.log(SumOfTo5(1,2,3));
+    console.log(SumOrMax(SumOfTo5, 1, 2, 3));
     console.log("\n");
-    console.log(SumOfTo5(1));
+    console.log(SumOrMax(SumOfTo5, 1));
     console.log("\n");
-    console.log(SumOfTo5(1,2,3,4,5,6));
+    console.log(SumOrMax(SumOfTo5, 1, 2, 3, 4, 5, 6));
     console.log("\n");
-    console.log(SumOfTo5(1,2,3,4,5));
+    console.log(SumOrMax(SumOfTo5, 1, 2, 3, 4, 5));
 }
 
-function SumOfTo5(a, ...x){ //Add to description
-    if(x.length > 4)
-    {
+function Task8() {
+    console.log(SumOrMax(MaxFromTo5, 1, 2, 3));
+    console.log(SumOrMax(MaxFromTo5, 1));
+    console.log(SumOrMax(MaxFromTo5, 1, 5, 8, 15, 23, 18));
+    console.log(SumOrMax(MaxFromTo5, 1, 5, 8, 23, 18));
+}
+
+function SumOrMax(func, a, ...x) { //Пример передаче функции в качестве аргумента
+    return func(a, ...x);
+}
+
+function SumOfTo5(a, ...x) { //Пример функции с переменным количеством параметров
+    if (x.length > 4) {
         return "Input error";
     }
-    if(x.length == 0)
-    {
+    if (x.length == 0) {
         return a;
     }
     for (i in x) {
-        a+=x[i];
+        a += x[i];
     }
     return a;
 }
 
-function Task8() {
-
+function MaxFromTo5(a, ...x) {
+    if (x.length > 4) {
+        return "Input error";
+    }
+    if (x.length == 0) {
+        return a;
+    }
+    return Math.max.apply(null, x);
 }
 
 function Task9() {
