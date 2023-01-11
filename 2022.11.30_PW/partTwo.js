@@ -1,8 +1,8 @@
 let userChoice;
 
 // while (true) {
-    userChoice = +prompt("Please select the task (1 - 5)");
-    console.log(DoTask(userChoice));
+userChoice = +prompt("Please select the task (1 - 5)");
+console.log(DoTask(userChoice));
 // }
 
 function DoTask(userChoice) {
@@ -28,7 +28,7 @@ function Task1() {
 }
 
 function GetFactorial(n) { //Пример рекурсивной функции
-    if (n === 1){
+    if (n === 1) {
         return 1;
     }
     else {
@@ -39,15 +39,44 @@ function GetFactorial(n) { //Пример рекурсивной функции
 function Task2() {
     let start = +prompt("Enter the start digit:");
     let finish = +prompt("Enter the finish digit:");
-    //return DirectOrder(start, finish);
-    return ReverseOrder(start, finish);
+    return order().order(start, finish);
+}
+
+function order() { //Пример применения паттерна модуль
+    let outString = "";
+    return {
+        direct: function (start, finish) {
+            if (start == finish && outString == "") {
+                return `${start}`;
+            }
+            if (start == finish) {
+                outString = outString.concat(start + " ");
+                return outString;
+            }
+            outString = outString.concat(start + " ");
+            start++;
+            return DirectOrder(start, finish, outString);
+        },
+        reverse: function (start, finish) {
+            if (finish == start && outString == "") {
+                return `${finish}`;
+            }
+            if (finish == start) {
+                outString = outString.concat(finish + " ");
+                return outString;
+            }
+            outString = outString.concat(finish + " ");
+            finish--;
+            return ReverseOrder(start, finish, outString);
+        }
+    }
 }
 
 function DirectOrder(start, finish, outString = "") { //Пример определения для параметра значения по умолчанию
-    if(start == finish && outString == ""){
+    if (start == finish && outString == "") {
         return `${start}`;
     }
-    if(start == finish) {
+    if (start == finish) {
         outString = outString.concat(start + " ");
         return outString;
     }
@@ -57,5 +86,14 @@ function DirectOrder(start, finish, outString = "") { //Пример опред�
 }
 
 function ReverseOrder(start, finish, outString = "") {
-
+    if (finish == start && outString == "") {
+        return `${finish}`;
+    }
+    if (finish == start) {
+        outString = outString.concat(finish + " ");
+        return outString;
+    }
+    outString = outString.concat(finish + " ");
+    finish--;
+    return ReverseOrder(start, finish, outString);
 }
