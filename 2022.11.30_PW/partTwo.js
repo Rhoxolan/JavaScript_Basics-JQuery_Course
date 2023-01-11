@@ -39,13 +39,12 @@ function GetFactorial(n) { //Пример рекурсивной функции
 function Task2() {
     let start = +prompt("Enter the start digit:");
     let finish = +prompt("Enter the finish digit:");
-    return order().direct(start, finish);
+    return order(start, finish).direct();
 }
 
-function order() { //Пример применения паттерна модуль
-    let outString = ""; //Рещить проблему
+function order(start, finish) { //Пример применения паттерна модуль
     return {
-        direct: function (start, finish) {
+        direct: function(outString = "") { //Пример определения для параметров значения по умолчанию
             if (start == finish && outString == "") {
                 return `${start}`;
             }
@@ -55,9 +54,9 @@ function order() { //Пример применения паттерна моду
             }
             outString = outString.concat(start + " ");
             start++;
-            return order().direct(start, finish);
+            return order(start, finish).direct(outString);
         },
-        reverse: function (start, finish) {
+        reverse: function(outString = "") {
             if (finish == start && outString == "") {
                 return `${finish}`;
             }
@@ -67,33 +66,7 @@ function order() { //Пример применения паттерна моду
             }
             outString = outString.concat(finish + " ");
             finish--;
-            return order().reverse(start, finish);
+            return order(start, finish).reverse(outString);
         }
     }
 }
-
-// function DirectOrder(start, finish, outString = "") { //Пример определения для параметра значения по умолчанию
-//     if (start == finish && outString == "") {
-//         return `${start}`;
-//     }
-//     if (start == finish) {
-//         outString = outString.concat(start + " ");
-//         return outString;
-//     }
-//     outString = outString.concat(start + " ");
-//     start++;
-//     return DirectOrder(start, finish, outString);
-// }
-
-// function ReverseOrder(start, finish, outString = "") {
-//     if (finish == start && outString == "") {
-//         return `${finish}`;
-//     }
-//     if (finish == start) {
-//         outString = outString.concat(finish + " ");
-//         return outString;
-//     }
-//     outString = outString.concat(finish + " ");
-//     finish--;
-//     return ReverseOrder(start, finish, outString);
-// }
