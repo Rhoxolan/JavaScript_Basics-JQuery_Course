@@ -154,9 +154,28 @@ function MaxFromTo5(a, ...x) {
 }
 
 function Task9() {
+    EvenOrOdd(1, 10, true);
+    console.log("\n");
+    EvenOrOdd(1, 10, false);
+}
 
+function EvenOrOdd(min, max, even) {
+    for (let index = min; index < max; index++) {
+        if (even) {
+            if (index % 2 == 0)
+                console.log(index);
+        }
+        else {
+            if (index % 2 != 0)
+                console.log(index);
+        }
+    }
 }
 
 function Task10() {
 
+}
+
+function GetTomorrow(day, moth, year) {
+    //Тут сделать проверку, из проверки сделать переменную вар типа дате, то есть проверить вар из блока.
 }
