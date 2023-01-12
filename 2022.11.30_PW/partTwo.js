@@ -1,9 +1,9 @@
 let userChoice;
 
-// while (true) {
-userChoice = +prompt("Please select the task (1 - 5)");
-console.log(DoTask(userChoice));
-// }
+while (true) {
+    userChoice = +prompt("Please select the task (1 - 5)");
+    console.log(DoTask(userChoice));
+}
 
 function DoTask(userChoice) {
     switch (userChoice) {
@@ -78,7 +78,7 @@ function Task3() {
 
 function reverse(number) {
     number = parseInt(number); //Пример преобразования вещественного числа к целочисленному значению
-    if(number < 10) {
+    if (number < 10) {
         return String(number);
     }
     return String(number % 10) + String(reverse(number / 10))
@@ -86,13 +86,17 @@ function reverse(number) {
 
 function Task4() {
     let number = +prompt("Please enter the number");
-    return SumOfTheNumber(number); //Попробовать сомовызывающуюся функцию
+    return SumOfTheNumber(number);
 }
 
 function SumOfTheNumber(number) {
     number = parseInt(number);
-    if(number < 10) {
+    if (number < 10) {
         return number;
     }
     return number % 10 + SumOfTheNumber(number / 10);
+}
+
+function Task5() {
+    return "Hello from Task 5!";
 }
