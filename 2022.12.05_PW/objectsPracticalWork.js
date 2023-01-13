@@ -16,6 +16,7 @@ rectangle.name = "rectA"; //Пример определения свойства
 console.log(ShowRectangleInfo(rectangle));
 
 //Task 2
+console.log(ShowRectangleWidth(rectangle));
 
 
 
@@ -26,7 +27,7 @@ function ShowRectangleInfo(r){
 }
 
 function ShowRectangleWidth(r){
-    // return     
+    return r.right_bottom.y - r.left_top.y;
 }
 
 
