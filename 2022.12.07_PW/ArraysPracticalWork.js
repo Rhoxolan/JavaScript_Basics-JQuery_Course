@@ -3,7 +3,7 @@ for (let i = 0; i < 10; i++) {
     randomNumbers[i] = Math.floor(Math.random() * 10); //Пример генерации рандомных чисел
 } //Пример определения элементов массива "по ходу"
 
-let randomNumbersSecond = Array.from(randomNumbers, n => n + 50); //Пример создания массива с использованием Array.from
+let randomNumbersSecond = Array.from(randomNumbers, n => n + 1); //Пример создания массива с использованием Array.from
 
 //Task 1.1
 ShowArray(randomNumbers);
@@ -24,6 +24,20 @@ ShowArray(randomNumbers);
 //Task 1.6
 DeleteOnIndex(randomNumbers, 3);
 ShowArray(randomNumbers);
+
+//Task 2.1
+let newArr = JoinTwoArrays(randomNumbers, randomNumbersSecond);
+console.log("_______");
+ShowArray(randomNumbers);
+ShowArray(randomNumbersSecond);
+ShowArray(newArr);
+
+//Task 2.2
+newArr = JoinTwoArraysCommonElems(randomNumbers, randomNumbersSecond);
+console.log("_______");
+ShowArray(randomNumbers);
+ShowArray(randomNumbersSecond);
+ShowArray(newArr);
 
 
 function ShowArray(arr) {
@@ -54,3 +68,21 @@ function PushOnIndex(arr, index, elem) {
 function DeleteOnIndex(arr, index) {
     arr.splice(index, 1);
 }
+
+function JoinTwoArrays(arr1, arr2) {
+    let arr3 = Array.from(arr1);
+    arr2.forEach(function (e) {
+        if (!arr1.includes(e)) arr3.push(e) //Пример перебора массива с использованием forEach
+    }); //Левый массив без изменений - проверяем правый
+    return arr3;
+}
+
+function JoinTwoArraysCommonElems(arr1, arr2) {
+    let arr3 = [];
+    arr1.forEach(function (e) {
+        if (arr1.includes(e) && arr2.includes(e))
+            arr3.push(e);
+    });
+}
+
+//Решить проблему с последним таском. Подумать переделать предпоследний таск, а его, возможно, в следующий таск.
