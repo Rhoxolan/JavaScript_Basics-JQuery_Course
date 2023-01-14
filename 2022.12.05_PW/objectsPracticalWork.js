@@ -56,9 +56,6 @@ console.log(ShowRectangleInfo(rectangle));
 console.log(IsPointIsCenter(rectangle, 75, 118));
 console.log(IsPointIsCenter(rectangle, 343.25, 441.75));
 
-
-//Попробовать потом заменить на модули
-
 function ShowRectangleInfo(r) {
     return `${r.name}: ${r}`
 }
