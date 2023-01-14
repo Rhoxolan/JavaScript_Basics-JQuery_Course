@@ -3,6 +3,8 @@ for (let i = 0; i < 10; i++) {
     randomNumbers[i] = Math.floor(Math.random() * 10); //Пример генерации рандомных чисел
 } //Пример определения элементов массива "по ходу"
 
+let randomNumbersSecond = Array.from(randomNumbers, n => n + 50); //Пример создания массива с использованием Array.from
+
 //Task 1.1
 ShowArray(randomNumbers);
 
@@ -17,6 +19,10 @@ console.log(GetMaxElem(randomNumbers));
 
 //Task 1.5
 PushOnIndex(randomNumbers, 3, 18);
+ShowArray(randomNumbers);
+
+//Task 1.6
+DeleteOnIndex(randomNumbers, 3);
 ShowArray(randomNumbers);
 
 
@@ -45,3 +51,6 @@ function PushOnIndex(arr, index, elem) {
     arr.splice(index, 0, elem); //Пример добавления в массив элемента по указанному индексу с помощью splice().
 }
 
+function DeleteOnIndex(arr, index) {
+    arr.splice(index, 1);
+}
