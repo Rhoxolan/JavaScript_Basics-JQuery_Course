@@ -6,10 +6,13 @@ let auto = { //Пример использования синтаксиса ма
 }
 
 console.log(GetCarInfo(auto));
-
-
+console.log(GetTimeOnRoad(auto, 30));
 
 function GetCarInfo(car) {
     //Пример использования синтаксиса массивов при вызове свойств
     return `${car["mark"]} ${car["model"]}, ${car["year of issue"]} - average speed ${car["average speed"]} km/h` 
+}
+
+function GetTimeOnRoad(car, km) {
+    return ((km * 1.25) / car["average speed"]) * 60;
 }
