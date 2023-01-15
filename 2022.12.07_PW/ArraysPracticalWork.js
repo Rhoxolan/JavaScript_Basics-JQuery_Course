@@ -51,6 +51,11 @@ ShowArray(newArr);
 //Task 3.1
 printFruits(fruits);
 
+//Task 3.2
+console.log(findTheFruit(fruits, "Apple"));
+console.log(findTheFruit(fruits, "lemon"));
+console.log(findTheFruit(fruits, "lImE"))
+
 function ShowArray(arr) {
     console.log(arr.join(' ')); //Пример объединения массива в строку с помощью join().
 }
@@ -128,5 +133,7 @@ function printFruits(fruits) {
 }
 
 function findTheFruit(fruits, name) {
-    
+    let upperCaseFruits = [];
+    fruits.forEach(e => upperCaseFruits.push(e.toUpperCase()));
+    return upperCaseFruits.indexOf(name.toUpperCase());
 }
