@@ -5,6 +5,8 @@ for (let i = 0; i < 10; i++) {
 
 let randomNumbersSecond = Array.from(randomNumbers, n => n + 1); //Пример создания массива с использованием Array.from
 
+let fruits = ["Apple", "Mango", "Lemon", "Lime", "Banana"];
+
 //Task 1.1
 ShowArray(randomNumbers);
 
@@ -45,6 +47,9 @@ console.log("_______");
 ShowArray(randomNumbers);
 ShowArray(randomNumbersSecond);
 ShowArray(newArr);
+
+//Task 3.1
+printFruits(fruits);
 
 function ShowArray(arr) {
     console.log(arr.join(' ')); //Пример объединения массива в строку с помощью join().
@@ -116,3 +121,12 @@ function ElemsFromFirstWhichNotINSecond(arr1, arr2) {
     return arr3;
 }
 
+function printFruits(fruits) {
+    document.write("<ul>"); //Пример отображения элементов на страницу с использованием document.write()
+    fruits.forEach(e => document.write(`<li>${e}</li>`));
+    document.write("</ul>");
+}
+
+function findTheFruit(fruits, name) {
+    
+}
