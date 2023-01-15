@@ -39,6 +39,12 @@ ShowArray(randomNumbers);
 ShowArray(randomNumbersSecond);
 ShowArray(newArr);
 
+//Task 2.3
+newArr = ElemsFromFirstWhichNotINSecond(randomNumbers, randomNumbersSecond)
+console.log("_______");
+ShowArray(randomNumbers);
+ShowArray(randomNumbersSecond);
+ShowArray(newArr);
 
 function ShowArray(arr) {
     console.log(arr.join(' ')); //Пример объединения массива в строку с помощью join().
@@ -70,19 +76,43 @@ function DeleteOnIndex(arr, index) {
 }
 
 function JoinTwoArrays(arr1, arr2) {
-    let arr3 = Array.from(arr1);
+
+    //Вариант 1 - Левый массив без изменений - проверяем правый
+
+    // let arr3 = Array.from(arr1);
+    // arr2.forEach(function (e) {
+    //     if (!arr1.includes(e)) arr3.push(e)
+    // });
+    // return arr3;
+
+    //Вариант 2 - без повторений, проверяем оба массива.
+    let arr3 = [];
+    arr1.forEach(function (e) { //Пример перебора массива с использованием forEach
+        if (!arr3.includes(e))
+            arr3.push(e);
+    });
     arr2.forEach(function (e) {
-        if (!arr1.includes(e)) arr3.push(e) //Пример перебора массива с использованием forEach
-    }); //Левый массив без изменений - проверяем правый
+        if (!arr3.includes(e))
+            arr3.push(e);
+    });
     return arr3;
 }
 
 function JoinTwoArraysCommonElems(arr1, arr2) {
     let arr3 = [];
     arr1.forEach(function (e) {
-        if (arr1.includes(e) && arr2.includes(e))
+        if (arr1.includes(e) && arr2.includes(e) && !arr3.includes(e))
             arr3.push(e);
     });
+    return arr3;
 }
 
-//Решить проблему с последним таском. Подумать переделать предпоследний таск, а его, возможно, в следующий таск.
+function ElemsFromFirstWhichNotINSecond(arr1, arr2) {
+    let arr3 = [];
+    arr1.forEach(function (e) {
+        if (!arr2.includes(e))
+            arr3.push(e);
+    });
+    return arr3;
+}
+
