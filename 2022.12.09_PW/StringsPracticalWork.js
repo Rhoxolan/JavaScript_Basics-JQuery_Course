@@ -41,6 +41,9 @@ console.log(wordsCount("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 //Task 8.
 console.log(GetLongestWord("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut felis dapibus lacus vehicula rhoncus."));
 
+//Task 9.
+
+
 function getLongerString(str1, str2) {
     if (str1.length > str2.length) { //Пример сравнения строк по длине с помошью length
         return 1;
@@ -116,4 +119,8 @@ function GetLongestWord(str) {
         return 0;
     });
     return strArray[0];
+}
+
+function averageWordsLength(str) {
+    
 }
