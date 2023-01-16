@@ -42,7 +42,10 @@ console.log(wordsCount("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 console.log(GetLongestWord("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut felis dapibus lacus vehicula rhoncus."));
 
 //Task 9.
+console.log(averageWordsLength("Lorem ipsum dolor sit amet."));
 
+//Task 10.
+showSymbolIndexes("Lorem ipsum dolor sit amet.", "e");
 
 function getLongerString(str1, str2) {
     if (str1.length > str2.length) { //Пример сравнения строк по длине с помошью length
@@ -112,9 +115,9 @@ function wordsCount(str) {
 function GetLongestWord(str) {
     let strArray = str.split(" ");
     strArray.sort(function (left, right) { //Пример сортировки массива по длине строчных элементов с помошью метода sort().
-        if(left.length < right.length)
+        if (left.length < right.length)
             return 1;
-        if(left.length > right.length)
+        if (left.length > right.length)
             return -1;
         return 0;
     });
@@ -122,5 +125,19 @@ function GetLongestWord(str) {
 }
 
 function averageWordsLength(str) {
-    
+    let strArray = str.split(" ");
+    let wordsSum = 0;
+    for (const word of strArray) {
+        wordsSum += word.length;
+    }
+    return (wordsSum / strArray.length).toFixed();
+}
+
+function showSymbolIndexes(str, symbol) {
+    let pos = -1;
+    let posArray = [];
+    while ((pos = str.indexOf(symbol, pos + 1)) != -1) { //Пример поиска символа в строке с помошью indexOf()
+        posArray.push(pos);
+    }
+    console.log(posArray.length + ": " + posArray);
 }
