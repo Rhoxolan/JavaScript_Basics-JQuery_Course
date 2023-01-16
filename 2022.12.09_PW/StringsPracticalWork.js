@@ -19,6 +19,8 @@ console.log(vowelsCount("stroka"));
 console.log(vowelsCount("String Of Strings"));
 console.log(vowelsCount("String\nOf\nStrings"));
 
+//Task 4.
+
 
 function getLongerString(str1, str2) {
     if(str1.length > str2.length) { //Пример сравнения строк по длине с помошью length
@@ -45,4 +47,6 @@ function vowelsCount(str) {
     return 0;
 }
 
-
+function SpamDetector(str) {
+    
+}
