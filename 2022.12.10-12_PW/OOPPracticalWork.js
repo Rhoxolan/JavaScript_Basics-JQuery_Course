@@ -25,29 +25,43 @@ class NewsArticle {
         this.#header = header;
         this.#text = text;
         this.#tags = tags;
-        this.#date = new Date(year, month + 1, day);
+        this.#date = new Date(year, month - 1, day);
     }
     print() {
         document.write(`<h2>${this.#header}</h2>`);
         let date = new Date();
-        let span = (date - this.#date) / 86400000;
-        if (span < 1) { //Пример определения к-ва дней по временному промежутку
-            document.write("<p><small>hodie<small></p>");
+        let span = (date - this.#date) / 86400000;//Пример определения к-ва дней по временному промежутку
+        if (span > 7) {
+            document.write(`<p><small>${this.#date.toLocaleDateString()}</small></p>`);
         }
-        if (span < 7 && span > 1 ) {
-            document.write(`<p><small>${span} days ago<small></p>`);
+        else if (span > 1) {
+            document.write(`<p><small>${span.toFixed()} days ago</small></p>`);
         }
-        else {
-            document.write(`<p><small>${this.#date.toLocaleDateString()}<small></p>`);
+        else if (span < 1) {
+            document.write("<p><small>hodie</small></p>");
         }
         document.write(`<p>${this.#text}</p>`);
-        //Дописать массив тегов
+        document.write(`<div style="display: flex; gap:7.5px">`);
+        for (const tag of this.#tags) {
+            document.write(`<div>#${tag}</div>`);
+        }
+        document.write(`</div>`);
     }
 }
 
-
+let article1 = new NewsArticle("Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente repudiandae ex cumque minima reprehenderit ducimus accusamus perferendis sit harum aperiam.",
+    ["lorem", "ipsum", "consectetur"], 2023, 1, 19);
+let article2 = new NewsArticle("Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente repudiandae ex cumque minima reprehenderit ducimus accusamus perferendis sit harum aperiam.",
+    ["lorem", "ipsum", "consectetur"], 2023, 1, 15);
+let article3 = new NewsArticle("Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente repudiandae ex cumque minima reprehenderit ducimus accusamus perferendis sit harum aperiam.",
+    ["lorem", "ipsum", "consectetur"], 2022, 10, 10);
 
 //Task 1
 print1.print("Lorem ipsum dolor sit amet.");
 print2.print("Lorem ipsum dolor sit amet.");
 print3.print("Lorem ipsum dolor sit amet.");
+
+//Task 2
+article1.print();
+article2.print();
+article3.print();
