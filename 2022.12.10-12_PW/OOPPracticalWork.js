@@ -30,7 +30,7 @@ class NewsArticle {
     print() {
         document.write(`<h2>${this.#header}</h2>`);
         let date = new Date();
-        let span = (date - this.#date) / 86400000;//Пример определения к-ва дней по временному промежутку
+        let span = (date - this.#date) / 86400000; //Пример определения к-ва дней по временному промежутку
         if (span > 7) {
             document.write(`<p><small>${this.#date.toLocaleDateString()}</small></p>`);
         }
@@ -56,12 +56,30 @@ let article2 = new NewsArticle("Lorem ipsum", "Lorem ipsum dolor sit amet, conse
 let article3 = new NewsArticle("Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente repudiandae ex cumque minima reprehenderit ducimus accusamus perferendis sit harum aperiam.",
     ["lorem", "ipsum", "consectetur"], 2022, 10, 10);
 
+class NewsLine {
+    #news = new Array();
+    get news() { //Пример определения get-метода
+        return this.#news;
+    }
+    print() {
+        this.#news.forEach(n => n.print());
+    }
+}
+
+let newsLine = new NewsLine();
+newsLine.news.push(article1, article2, article3);
+
 //Task 1
 print1.print("Lorem ipsum dolor sit amet.");
 print2.print("Lorem ipsum dolor sit amet.");
 print3.print("Lorem ipsum dolor sit amet.");
+document.write("<hr>");
 
 //Task 2
 article1.print();
 article2.print();
 article3.print();
+document.write("<hr>");
+
+//Task 3
+newsLine.print();
