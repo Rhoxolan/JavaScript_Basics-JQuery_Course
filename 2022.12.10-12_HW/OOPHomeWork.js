@@ -108,6 +108,35 @@ let square = new Square("Kvadratik", 50);
 let rect = new Rectangle("Pryamokutnyk", 70, 15);
 let figures = [square, rect];
 
+class ExtendedArray extends Array { //Пример наследования от стандартного класса Array
+    getString(sepatator) {
+        return this.join(sepatator);
+    }
+    getHTML(tagName) {
+        let buf = new String();
+        if(tagName == "li") {
+            buf = buf.concat("<ul>");
+        }
+        for (const i of this) {
+            buf = buf.concat(`<${tagName}>${i}</${tagName}>`);
+        }
+        if(tagName == "li") {
+            buf = buf.concat("</ul>");
+        }
+        return buf;
+    }
+}
+
+let texts = new ExtendedArray();
+texts.push("first");
+texts.push("second");
+texts.push("third");
+
+let buttons = new ExtendedArray();
+buttons.push("<button style='margin-bottom: 5px'>Button 1</button>");
+buttons.push("<button style='margin-bottom: 5px'>Button 2</button>");
+buttons.push("<button style='margin-bottom: 5px'>Button 3</button>");
+
 //Task 1.1
 btn1.showBtn();
 document.write("<div style='margin: 10px'></div>");
@@ -126,4 +155,9 @@ for (const f of figures) {
     console.log(`Area of ${f.name} is ${f.getArea()}`);
 }
 
-
+//Task 3.1
+console.log(texts.getString(",_ _ _"));
+document.write("<hr>");
+//Task 3.2
+document.write(buttons.getHTML("div"));
+document.write(buttons.getHTML("li"));
