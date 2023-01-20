@@ -42,7 +42,7 @@ class BootstrapButton extends Button { //Пример наследования �
     set color(value) {
         this.#color = value;
     }
-    constructor(width, height, text, color){
+    constructor(width, height, text, color) {
         super(width, height, text); //Пример вызова конструктора базового класса при наследовании с использованием super 
         this.#color = color;
     }
@@ -64,7 +64,7 @@ class Figure { //Пример создания абстрактного клас
 
     }
     constructor(name) {
-        if(this.constructor.name === "Figure") {
+        if (this.constructor.name === "Figure") {
             throw new Error(`${this.constructor.name}: can not create instance of abstract class`);
         }
         this.name = name;
@@ -87,7 +87,26 @@ class Square extends Figure {
     }
 }
 
+class Rectangle extends Figure {
+    constructor(name, sideA, sideB) {
+        super(name);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+    showInfo() {
+        return `The sides of the ${this.name} rectangle is ${this.sideA}:${this.sideB}`;
+    }
+    getP() {
+        return (this.sideA + this.sideB) * 2;
+    }
+    getArea() {
+        return this.sideA * this.sideB;
+    }
+}
+
 let square = new Square("Kvadratik", 50);
+let rect = new Rectangle("Pryamokutnyk", 70, 15);
+let figures = [square, rect];
 
 //Task 1.1
 btn1.showBtn();
@@ -96,7 +115,15 @@ document.write("<div style='margin: 10px'></div>");
 btn2.showBtn();
 
 //Task 2
-console.log(square.showInfo());
-console.log(square.getP());
-console.log(square.getArea());
+
+// console.log(square.showInfo());
+// console.log(square.getP());
+// console.log(square.getArea());
+
+for (const f of figures) {
+    console.log(f.showInfo());
+    console.log(`P of ${f.name} is ${f.getP()}`);
+    console.log(`Area of ${f.name} is ${f.getArea()}`);
+}
+
 
