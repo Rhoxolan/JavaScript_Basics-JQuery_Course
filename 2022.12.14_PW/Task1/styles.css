@@ -1,0 +1,9 @@
+body{
+    background-color: #FBF2E9;
+}
+
+.taskDiv {
+    margin: auto;
+    width: 250px;
+    text-align: center;
+}
