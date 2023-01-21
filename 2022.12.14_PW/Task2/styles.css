@@ -1,0 +1,9 @@
+body {
+    background-color: #FBF2E9;
+}
+
+#secondTaskDiv {
+    border: 1px solid red;
+    text-align: center;
+    height: 98vh;
+}
