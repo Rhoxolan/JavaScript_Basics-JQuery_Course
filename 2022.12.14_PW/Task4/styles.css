@@ -1,0 +1,32 @@
+body {
+    background-color: #FBF2E9;
+}
+
+#menuDiv {
+    background-color: #597BA0;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    color: rgb(250, 243, 243);
+    padding-top: 10px;
+    max-width: 70px;
+}
+
+.itemDiv {
+    padding: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom: 7.5px;
+    margin-bottom: 1px;
+}
+
+#textDiv{
+    margin: 10px 25px 25px 70px;
+    position: static;
+}
+
+.itemDiv:hover {
+    background-color: #4873A1;
+}
+
