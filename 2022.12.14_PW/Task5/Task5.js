@@ -1,0 +1,2 @@
+//Пример поиска всех элементов на странице по классу с помощью document.querySelectorAll(); Пример назначения группе элементов по селектору класса обработчика событий
+document.querySelectorAll('.rightButton').forEach(b => b.onclick = e => e.composedPath()[2].style.display = "none");

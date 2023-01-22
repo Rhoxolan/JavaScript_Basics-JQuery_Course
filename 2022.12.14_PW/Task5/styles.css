@@ -1,0 +1,15 @@
+body {
+    background-color: #FBF2E9;
+}
+
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightButton{
+    height: 25px;
+    width: 105px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
