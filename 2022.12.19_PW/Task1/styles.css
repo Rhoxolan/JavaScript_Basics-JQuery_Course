@@ -1,0 +1,45 @@
+#centralDiv {
+    width: 150px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+}
+
+#numericDiv {
+    border: 1px solid black;
+    width: 70%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#numericSpan{
+    font-size: 72px;
+}
+
+#upDownDiv {
+    height: 100%;
+    width: 30%;
+}
+
+.arrowDiv{
+    border: 1px solid black;
+    height: 49.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#upArrow {
+    border-left: 0;
+    border-bottom: 0;
+    border-top-right-radius: 5px;
+}
+
+#downArrow {
+    border-left: 0;
+    border-bottom-right-radius: 5px;
+}
