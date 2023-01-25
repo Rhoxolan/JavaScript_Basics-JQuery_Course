@@ -1,0 +1,18 @@
+#palette {
+    border: 0.5 px solid dimgray;
+    background-color: darkgray;
+    max-width: 244px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+}
+
+.cell {
+    margin: 1px;
+    width: 25px;
+    height: 25px;
+}
+
+#textP {
+    font-size: larger;
+}
