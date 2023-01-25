@@ -1,0 +1,29 @@
+.formDiv {
+    width: 180px;
+    margin: auto;
+}
+
+.inputDiv {
+    margin-bottom: 10px;
+}
+
+.labelDiv{
+    margin-bottom: 2px;
+}
+
+.forgorPasswordRefDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#input1{
+    width: 95%;
+}
+
+#input2{
+    width: 95%;
+}
+
+#submitButton{
+    width: 100%;
+}
