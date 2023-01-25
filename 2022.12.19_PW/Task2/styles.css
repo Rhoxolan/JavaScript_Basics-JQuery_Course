@@ -2,7 +2,7 @@
     width: 95%;
     margin: auto;
     display: flex;
-    overflow:initial;
+    flex-wrap: wrap;
 }
 
 #addButtonDiv {
@@ -22,5 +22,4 @@
     max-width: 150px;
     max-height: 150px;
     margin: 15px;
-    background-color: aquamarine;
 }
