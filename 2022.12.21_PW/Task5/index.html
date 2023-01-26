@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/Task5/styles.css">
 </head>
 
+
 <body>
 
     <div id="centraldiv">
@@ -18,17 +19,27 @@
             <h2>All questions:</h2>
         </div>
         <hr>
-        <form>
+        <form name="newQuestionForm">
             <h2>Add new question:</h2>
-            <div id="inputsDiv">
+            <div class="inputsDiv">
                 <label id="questionlabel" for="questionInput">Question: </label>
                 <input class="textInput" id="questionInput" name="questionInput" type="text">
             </div>
+            <div class="inputsDiv">
+                <label id="correctAnswerlabel" for="correctAnswerInput">Correct answer: </label>
+                <input class="textInput" id="correctAnswerInput" name="correctAnswerInput" type="text">
+            </div>
+            <div class="inputsDiv">
+                <label id="wrongAnswerlabel" for="wrongAnswerInput">Wrong answer: </label>
+                <input class="textInput" id="wrongAnswerInput" name="wrongAnswerInput" type="text">
+            </div>
+            <button id="submitButton" type="submit">Add</button>
         </form>
 
 
     </div>
 
+    <script src="/Task5/Task5.js"></script>
 
 </body>
 

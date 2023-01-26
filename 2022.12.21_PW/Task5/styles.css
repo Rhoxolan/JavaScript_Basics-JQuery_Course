@@ -4,16 +4,21 @@
 }
 
 /* Div for question display */
-#qestionDiv {
+.qestionDiv {
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
-#inputsDiv {
+.inputsDiv {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .textInput {
     width: 75%;
+}
+
+#submitButton {
+    width: 100%;
 }
