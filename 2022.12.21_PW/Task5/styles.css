@@ -1,0 +1,19 @@
+#centraldiv {
+    width: 500px;
+    margin: auto;
+}
+
+/* Div for question display */
+#qestionDiv {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#inputsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textInput {
+    width: 75%;
+}
