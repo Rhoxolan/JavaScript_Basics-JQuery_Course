@@ -7,9 +7,16 @@
     text-align: center;
 }
 
-.labelClass{
+.labelDiv {
     margin-bottom: 3px;
     font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrongMessageDiv {
+    color: rgb(180, 3, 3);
+    visibility: hidden;
 }
 
 .inputClass {

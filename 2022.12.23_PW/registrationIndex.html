@@ -15,18 +15,24 @@
             <div id="headerDiv">
                 <h3>Registration</h3>
             </div>
-            <label class="labelClass" for="emailInput">E-Mail:</label>
-            <br>
+            <div class="labelDiv">
+                <label for="emailInput">E-Mail:</label>
+                <div class="wrongMessageDiv" id="wrongEMailDiv">Wrong email address</div>
+            </div>
             <input class="inputClass" type="email" name="emailInput" id="emailInput" required>
-            <label class="labelClass" for="passwordInput">Password:</label>
-            <br>
+            <div class="labelDiv">
+                <label for="passwordInput">Password:</label>
+            </div>
             <input class="inputClass" type="password" name="passwordInput" id="passwordInput" required>
-            <label class="labelClass" for="repeatPasswordInput">E-Mail:</label>
-            <br>
+            <div class="labelDiv">
+                <label for="repeatPasswordInput">Repeat password:</label>
+            </div>
             <input class="inputClass" type="password" name="repeatPasswordInput" id="repeatPasswordInput" required>
             <button id="signUpButton" type="submit">Sign Up</button>
         </form>
     </div>
+
+    <script src="/registration.js"></script>
 
 </body>
 </html>
