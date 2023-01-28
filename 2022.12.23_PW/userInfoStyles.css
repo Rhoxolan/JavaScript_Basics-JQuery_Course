@@ -1,0 +1,53 @@
+#centralDiv {
+    width: 600px;
+    margin: auto;
+}
+
+#userInfoDiv {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#emailDiv{
+    font-weight: bolder;
+}
+
+#headerDiv {
+    text-align: center;
+}
+
+.inputLineDiv {
+    display: flex;
+    gap: 35px;
+}
+
+.inputPartLineDiv{
+    width: 50%;
+}
+
+.labelDiv {
+    margin-bottom: 3px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputClass {
+    margin-bottom: 12px;
+    width: 98%;
+    border-radius: 3px;
+    border: 1px solid rgb(70, 70, 70);
+    height: 28px;
+    font-size: larger;
+}
+
+.wrongMessageDiv {
+    color: rgb(180, 3, 3);
+    visibility: hidden;
+}
+
+#genderInput {
+    width: 100%;
+    height: 33px;
+}

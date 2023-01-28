@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User info</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/userInfoStyles.css">
+</head>
+
+<body>
+
+    <div id="centralDiv">
+        <div id="userInfoDiv">
+            <div id="emailDiv">
+                Hello, <span id="eMailSpan"></span>!
+            </div>
+            <button>Exit</button>
+        </div>
+        <hr>
+        <form name="registrationFrom">
+            <div id="headerDiv">
+                <h3>User info</h3>
+            </div>
+            <div class="inputLineDiv">
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="firstNameInput">First Name:</label>
+                        <div class="wrongMessageDiv" id="wrongFirstNameDiv">Wrong First Name</div>
+                    </div>
+                    <input class="inputClass" type="text" name="firstNameInput" id="firstNameInput" required>
+                </div>
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="lastNameInput">Last Name:</label>
+                        <div class="wrongMessageDiv" id="wrongLastNameDiv">Wrong Last Name</div>
+                    </div>
+                    <input class="inputClass" type="text" name="lastNameInput" id="lastNameInput" required>
+                </div>
+            </div>
+            <div class="inputLineDiv">
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="yearOfBirthNameInput">Year of birth:</label>
+                        <div class="wrongMessageDiv" id="wrongYearOfBirthDiv">Wrong year of birth</div>
+                    </div>
+                    <input class="inputClass" type="text" name="yearOfBirthNameInput" id="yearOfBirthNameInput" required>
+                </div>
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="genderInput">Gender:</label>
+                    </div>
+                    <select class="inputClass" name="genderInput" id="genderInput">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputLineDiv">
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="phoneNumberInput">Phone number:</label>
+                        <div class="wrongMessageDiv" id="wrongPhoneNumberDiv">Wrong phone number</div>
+                    </div>
+                    <input class="inputClass" type="text" name="phoneNumberInput" id="phoneNumberInput">
+                </div>
+                <div class="inputPartLineDiv">
+                    <div class="labelDiv">
+                        <label for="skypeInput">Skype:</label>
+                        <div class="wrongMessageDiv" id="wrongSkypeDiv">Wrong Skype</div>
+                    </div>
+                    <input class="inputClass" type="text" name="skypeInput" id="skypeInput">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
