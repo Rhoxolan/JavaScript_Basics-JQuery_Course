@@ -2,6 +2,12 @@ const eMailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))
 
 document.forms.registrationFrom.addEventListener("submit", onSubmit);
 
+function onLoad() {
+    document.cookie.split('; ').forEach(c => { //Пример работы с cookie
+        if (c.includes("email"))
+            location.href = "/userInfoIndex.html";
+    });
+}
 
 function onSubmit(e) {
     e.preventDefault();

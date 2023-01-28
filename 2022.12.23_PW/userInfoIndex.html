@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="/userInfoStyles.css">
 </head>
 
-<body>
+<body onload="onLoad()">
 
     <div id="centralDiv">
         <div id="userInfoDiv">
             <div id="emailDiv">
                 Hello, <span id="eMailSpan"></span>!
             </div>
-            <button>Exit</button>
+            <button id="exitButton">Exit</button>
         </div>
         <hr>
         <form name="registrationFrom">
@@ -77,6 +77,8 @@
             <button id="signUpButton" type="submit">Sign Up</button>
         </form>
     </div>
+
+    <script src="/userInfo.js"></script>
 
 </body>
 
