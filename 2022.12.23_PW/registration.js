@@ -12,7 +12,7 @@ function onLoad() {
 function onSubmit(e) {
     e.preventDefault();
     let checker = false;
-    if (eMailRegExp.test(document.forms.registrationFrom.elements.emailInput.value)) { //Пример проверки валидности ввода E-Mail с помошью регкуярного выражения (RegExp)
+    if (eMailRegExp.test(document.forms.registrationFrom.elements.emailInput.value)) { //Пример проверки валидности ввода E-Mail с помошью регулярного выражения (RegExp)
         document.getElementById("wrongEMailDiv").style.visibility = "hidden";
         document.cookie = `email=${document.forms.registrationFrom.elements.emailInput.value}; max-age=3600`; //Пример добавления cookie; пример добавления cookie с параметром автоудаления через час
     }
