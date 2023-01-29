@@ -33,4 +33,12 @@ function onSubmit(e) {
         document.getElementById("wrongLastNameDiv").style.visibility = "visible";
         checker = true;
     }
+    if (.test(document.forms.userInfoFrom.elements.yearOfBirthInput.value)) {
+        document.getElementById("wrongYearOfBirthDiv").style.visibility = "hidden";
+        document.cookie = `yearOfBirth=${document.forms.userInfoFrom.elements.yearOfBirthInput.value}; max-age=3600`;
+    }
+    else {
+        document.getElementById("wrongYearOfBirthDiv").style.visibility = "visible";
+        checker = true;
+    }
 }
