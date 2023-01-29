@@ -10,5 +10,5 @@ document.getElementById("exitButton").addEventListener("click", onExitButtonClic
 
 function onExitButtonClick(e) {
     document.cookie.split('; ').forEach(c => document.cookie = `${c}; max-age=-1`); //Пример алгоритма по удалению всех coockies c document.cookie
-    location.href = "/registrationIndex.html";
+    location.replace("/registrationIndex.html");
 }

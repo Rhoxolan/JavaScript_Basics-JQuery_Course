@@ -5,7 +5,7 @@ document.forms.registrationFrom.addEventListener("submit", onSubmit);
 function onLoad() {
     document.cookie.split('; ').forEach(c => { //Пример работы с cookie
         if (c.includes("email"))
-            location.href = "/userInfoIndex.html";
+        location.replace("/userInfoIndex.html"); //Пример смены страницы без сохранения в истории с помошью location.replace()
     });
 }
 
@@ -32,4 +32,5 @@ function onSubmit(e) {
     if (checker) {
         return false;
     }
+    location.replace("/userInfoIndex.html");
 }
