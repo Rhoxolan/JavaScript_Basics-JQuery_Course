@@ -2,12 +2,8 @@
     width: 700px;
     margin: auto;
     display: grid;
-    grid-template-columns: [col1start] 22.5% [col1end] 0px
-                            [col2start] 22.5% [col2end] 5px
-                            [col3start] 10% [col3end] 5px
-                            [col4start] 45% [col4end];
-    grid-template-rows: [row1start] 100px [row1end] 0px
-                        [row2start] 450px [row2end];
+    grid-template-columns: [col1start] 22.5% [col1end] 0px [col2start] 22.5% [col2end] 10px [col3start] 10% [col3end] 10px [col4start] 45% [col4end];
+    grid-template-rows: [row1start] 100px [row1end] 0px [row2start] 450px [row2end];
 }
 
 #enterJsonH {
@@ -15,9 +11,51 @@
     grid-row: row1start / row1end;
 }
 
-#formatErrorH{
+#formatErrorH {
     grid-column: col2start / col2end;
     grid-row: row1start / row1end;
     color: rgb(204, 17, 17);
     text-align: right;
+    visibility: hidden;
+}
+
+#formattedJsonH {
+    grid-column: col4start / col4end;
+    grid-row: row1start / row1end;
+}
+
+.jsonTextArea {
+    resize: none;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 5px;
+    font-size: x-large;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+#jsonTextArea {
+    grid-column: col1start / col2end;
+    grid-row: row2start / row2end;
+    width: 100%;
+    height: 100%;
+}
+
+#formattedJsonArea {
+    grid-column: col4start / col4end;
+    grid-row: row2start / row2end;
+    width: 100%;
+    height: 100%;
+}
+#submitButton{
+    grid-column: col3start / col3end;
+    grid-row: row2start / row2end;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(5, 5, 5);
+    font-size: 50px;
+}
+
+#submitButton:hover{
+    background-color: rgba(192, 190, 190, 0.774);
 }
