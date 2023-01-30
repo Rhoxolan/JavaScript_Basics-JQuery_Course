@@ -51,7 +51,7 @@ function onExitButtonClick(e) {
 function onSubmit(e) {
     e.preventDefault();
     let checker = false;
-    if (/^(?=.{0,20}$)[a-z]/i.test(document.forms.userInfoFrom.elements.firstNameInput.value)) { //Пример проверки ввода с помощью регулярного выражения; пример ограничения количетсва символов с помощью регулярного выражения
+    if (/^(?=.{0,20}$)[a-z]/i.test(document.forms.userInfoFrom.elements.firstNameInput.value)) { //Пример проверки ввода с помощью регулярного выражения; пример ограничения количества символов с помощью регулярного выражения
         document.getElementById("wrongFirstNameDiv").style.visibility = "hidden";
         document.cookie = `firstName=${document.forms.userInfoFrom.elements.firstNameInput.value}; max-age=3600`;
     }
