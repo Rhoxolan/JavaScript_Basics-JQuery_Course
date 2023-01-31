@@ -1,0 +1,21 @@
+#centralDiv {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+#usersDiv {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userDiv {
+    margin: 15px;
+    width: 200px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
