@@ -1,0 +1,17 @@
+body{
+    height: 98vh;
+    background-image: url("/Task1/roadImg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#catDiv{
+    top: 75%;
+    left: 5%;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background-image: url("/Task1/Cat.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
