@@ -1,0 +1,43 @@
+body {
+    background-color: #FBF2E9;
+}
+
+#centralDiv{
+    width: 700px;
+    margin: auto;
+}
+
+#selectColorDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.colorDiv{
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgba(141, 141, 141, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#redColorDiv{
+    background-color: #DF7B9D;
+}
+
+#greenColorDiv{
+    background-color: #28B9B1;
+}
+
+#orangeColorDiv{
+    background-color: #FF8758;
+}
+
+#yellowColorDiv{
+    background-color: #DDAC29;
+}
+
+#fruitsHeaderDiv{
+    text-align: center;
+}
