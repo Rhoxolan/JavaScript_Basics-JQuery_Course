@@ -13,31 +13,47 @@ body {
     align-items: center;
 }
 
-.colorDiv{
-    width: 100px;
-    height: 30px;
+.selectDiv{
     border: 1px solid rgba(141, 141, 141, 0.596);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: whitesmoke;
 }
 
-#redColorDiv{
+.colorDiv{
+    width: 100px;
+    height: 30px;
+}
+
+.redDiv{
     background-color: #DF7B9D;
 }
 
-#greenColorDiv{
+.greenDiv{
     background-color: #28B9B1;
 }
 
-#orangeColorDiv{
+.orangeDiv{
     background-color: #FF8758;
 }
 
-#yellowColorDiv{
+.yellowDiv{
     background-color: #DDAC29;
 }
 
 #fruitsHeaderDiv{
     text-align: center;
+}
+
+#fruitsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+}
+
+.fruitDiv {
+    width: 200px;
+    height: 45px;
 }
