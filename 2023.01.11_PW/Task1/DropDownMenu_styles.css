@@ -1,0 +1,49 @@
+.textDiv {
+    margin: 10px 25px 25px 75px;
+    position: static;
+}
+
+.menuDiv {
+    background-color: rgb(161, 161, 161);
+    width: 55px;
+    top: 0px;
+    left: 0px;
+    padding: 1px;
+    height: 100%;
+    position: fixed;
+    transition-duration: 0.5s;
+    color: rgb(250, 243, 243);
+    overflow: hidden;
+}
+
+.menuDiv .itemTextDiv {
+    overflow: hidden;
+    width: 0;
+}
+
+.menuDiv h4 {
+    text-align: center;
+}
+
+.itemDiv {
+    padding: 5px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.itemDiv:hover {
+    background-color: dimgrey;
+}
+
+.itemTextDiv {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.menuDiv:hover {
+    width: 175px;
+}
+
+.menuDiv:hover .itemTextDiv {
+    width: auto;
+}
