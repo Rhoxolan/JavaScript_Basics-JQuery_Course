@@ -1,0 +1,3 @@
+$(".starDiv").click(() => {
+    alert("Hello!");
+})

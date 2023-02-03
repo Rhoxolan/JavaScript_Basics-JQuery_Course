@@ -1,0 +1,18 @@
+body {
+    background-color: #FBF2E9;
+}
+
+#centralDiv{
+    display: flex;
+    margin: auto;
+    width: 280px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.starDiv{
+    width: 20px;
+    height: 20px;
+    background-image: url(/Task2/Stars/empty_star.png);
+    background-size: 100% 100%;
+}
