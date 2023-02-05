@@ -17,38 +17,15 @@ $("#usersDiv").on('click', '.userDiv', function () {
     $("#postsDiv").text("");
 });
 
-//Переделать под jQuery
-document.getElementById("showPostsButton").addEventListener("click", e => {
-    if (document.getElementById("nameTd").innerText != "") {
-        const postsRequest = new XMLHttpRequest();
-        postsRequest.open("GET", `https://jsonplaceholder.typicode.com/posts?userId=${users.find(u => u.name == document.getElementById("nameTd").innerText).id}`, false);
-        let posts;
-        postsRequest.onload = () => {
-            if (postsRequest.status == 200) {
-                posts = JSON.parse(postsRequest.responseText);
-                let postsDiv = document.getElementById("postsDiv");
-                let headerDiv = document.createElement("div");
-                headerDiv.id = "headerDiv";
-                let h = document.createElement("h3");
-                h.innerText = "User's posts";
-                headerDiv.appendChild(h);
-                postsDiv.appendChild(headerDiv);
-                posts.forEach(p => {
-                    let postDiv = document.createElement("div");
-                    postDiv.className = "postDiv";
-                    let postTitle = document.createElement("h5");
-                    postTitle.innerText = p.title;
-                    postDiv.appendChild(postTitle);
-                    let post = document.createElement("div");
-                    post.innerText = p.body;
-                    postDiv.appendChild(post);
-                    postsDiv.appendChild(postDiv);
-                });
-            }
-            else {
-                console.log(`Server response: ${postsRequest.responseText}`);
-            }
-        };
-        postsRequest.send();
+$("#showPostsButton").click(e => {
+    if ($("#nameTd").text() != "") {
+        $.getJSON(`https://jsonplaceholder.typicode.com/posts?userId=${users.find(u => u.name == $("#nameTd").text()).id}`)
+            .done((d) => {
+                $("#postsDiv").append("<div id='headerDiv'><h3>User's posts</h3></div>");
+                d.forEach(p => {
+                    $("#postsDiv").append(`<div class='postDiv'><h5>${p.title}</h5><div>${p.body}</div></div>`);
+                })
+            })
+            .fail((d) => console.log(d.status));
     }
 });
